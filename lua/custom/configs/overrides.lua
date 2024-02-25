@@ -14,6 +14,7 @@ M.treesitter = {
     "markdown_inline",
     "prisma",
     "svelte",
+    "rust",
   },
   indent = {
     enable = true,
@@ -49,7 +50,7 @@ M.nvimtree = {
   },
   view = {
     side = "right",
-    adaptive_size = "true"
+    adaptive_size = "true",
   },
   renderer = {
     highlight_git = true,
