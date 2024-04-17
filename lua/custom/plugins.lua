@@ -46,15 +46,15 @@ local plugins = {
       require "custom.configs.conform"
     end,
   },
-  {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    opts = overrides.copilot,
-    config = function()
-      require("copilot").setup {}
-    end,
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   opts = overrides.copilot,
+  --   config = function()
+  --     require("copilot").setup {}
+  --   end,
+  -- },
   {
     "hrsh7th/nvim-cmp",
     dependencies = {
@@ -76,6 +76,23 @@ local plugins = {
       },
     },
     enabled = true,
+  },
+  {
+    "nvim-pack/nvim-spectre",
+    dependencies = {
+      {
+        "nvim-lua/plenary.nvim",
+      },
+    },
+    config = function()
+      require("spectre").setup()
+    end,
+  },
+  {
+    "laytan/tailwind-sorter.nvim",
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" },
+    build = "cd formatter && npm ci && npm run build",
+    config = true,
   },
 }
 

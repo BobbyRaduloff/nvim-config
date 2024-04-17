@@ -15,7 +15,8 @@ local options = {
     javascriptreact = { "prettier" },
     typescriptreact = { "prettier" },
     prisma = { "prisma-fmt" },
-    rust = { "rust-analyzer" },
+    rust = { "rustfmt" },
+    cs = { "omnisharp" },
   },
 
   -- adding same formatter for multiple filetypes can look too much work for some
