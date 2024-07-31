@@ -17,6 +17,7 @@ local options = {
     prisma = { "prisma-fmt" },
     rust = { "rustfmt" },
     cs = { "omnisharp" },
+    go = { "goimports", "gofmt" },
   },
 
   -- adding same formatter for multiple filetypes can look too much work for some
