@@ -89,17 +89,6 @@ local plugins = {
     end,
   },
 
-  -- {
-  --   "luckasRanarison/tailwind-tools.nvim",
-  --   lazy = false,
-  --   dependencies = { "nvim-treesitter/nvim-treesitter" },
-  --   opts = {
-  --     document_color = {
-  --       kind = "foreground",
-  --     },
-  --   }, -- your configuration
-  -- },
-
   {
     "ray-x/go.nvim",
     dependencies = { -- optional packages
@@ -141,7 +130,12 @@ local plugins = {
     "laytan/tailwind-sorter.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" },
     build = "cd formatter && npm ci && npm run build",
-    config = true,
+    lazy = false,
+    opts = {
+      on_save_enabled = true,
+      on_save_pattern = { "*.html", "*.js", "*.jsx", "*.tsx", "*.twig", "*.hbs", "*.php", "*.heex", "*.astro" },
+      node_path = "node",
+    },
   },
 }
 
